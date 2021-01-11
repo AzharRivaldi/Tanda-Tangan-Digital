@@ -1,68 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:signature="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/signature_pad_container"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/buttons_container">
-
-        <FrameLayout
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_above="@+id/signature_pad_description"
-            android:layout_marginBottom="8dp"
-            android:background="@android:color/darker_gray" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
 
         <TextView
-            android:id="@+id/signature_pad_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Tanda Tangan Digital"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Sentuh dan gerakan jari Anda pada Area dibawah ini untuk membuat Tanda Tangan Digital."
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/signatureContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearButton"
+        android:layout_below="@id/linearMessage">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/signatureDescription"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/signatureDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
-            android:text="@string/agreement"
-            android:textColor="@android:color/darker_gray" />
+            android:text="*Saya Setuju dengan Syarat dan Ketentuan"
+            android:textColor="@android:color/black" />
 
         <com.github.gcacace.signaturepad.views.SignaturePad
-            android:id="@+id/signature_pad"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
+            android:id="@+id/signaturePad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:penColor="@android:color/black" />
 
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/buttons_container"
-        android:layout_width="fill_parent"
+        android:id="@+id/linearButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:paddingTop="16dp">
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/clear_button"
+            android:id="@+id/btnClear"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:drawableStart="@drawable/ic_delete"
             android:enabled="false"
-            android:text="@string/clear_pad" />
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="Clear"
+            android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/save_button"
+            android:id="@+id/btnSave"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:drawableStart="@drawable/ic_save"
             android:enabled="false"
-            android:text="@string/save_signature" />
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="Save"
+            android:textColor="@android:color/white" />
+
     </LinearLayout>
 
 </RelativeLayout>
