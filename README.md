@@ -11,4 +11,4 @@ https://rivaldi48.blogspot.com/2019/04/tutorial-membuat-aplikasi-tanda-tangan.ht
 
 ## 🗂 SUPPORT ME:
 <a href="https://sociabuzz.com/azharrvldi_/donate"> 
-<img src="https://github.com/AzharRivaldi/AzharRivaldi/blob/master/Support%20Here.png" width="100" height="100"></a>
+<img src="https://github.com/AzharRivaldi/AzharRivaldi/blob/master/Support%20Here.png" width="200" height="200"></a>
