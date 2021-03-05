@@ -14,4 +14,3 @@ https://rivaldi48.blogspot.com/2019/04/tutorial-membuat-aplikasi-tanda-tangan.ht
 ## 🗂 Click For Support Me :
 <a href="https://sociabuzz.com/azharrvldi_/donate"> 
 <img src="https://github.com/AzharRivaldi/AzharRivaldi/blob/master/Support%20Here.png" width="200" height="200"></a>
-*****Support with GoPay, OVO, DANA, Link Aja or via BCA, Mandiri, BNI, PermataBank, BRI***
